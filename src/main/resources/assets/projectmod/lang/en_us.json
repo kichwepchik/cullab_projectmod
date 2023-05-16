@@ -1,3 +1,26 @@
 {
-  "block.projectmod.sapphire_block": "Block of Sapphire"
+  "block.projectmod.sapphire_block": "Block of Sapphire",
+  "block.projectmod.titan_block": "Block of Titan",
+  "block.projectmod.deepslate_titan_ore": "Deepslate Titan Ore",
+  "block.projectmod.netherrack_titan_ore": "Nether Titan Ore",
+  "block.projectmod.sapphire_ore": "Sapphire Ore",
+
+  "item.projectmod.sapphire": "sapphire",
+  "item.projectmod.raw_titan": "raw titan",
+  "item.projectmod.titan_ingot": "titan ingot",
+  "item.projectmod.ghost_heart": "ghost heart",
+  "item.projectmod.piece_of_soul": "piece of soul",
+
+  "itemGroup.projectmod": "Coollub",
+
+  "item.projectmod.titan_sword": "Titan Sword",
+  "item.projectmod.titan_pickaxe": "Titan Pickaxe",
+  "item.projectmod.titan_shovel": "Titan Shovel",
+  "item.projectmod.titan_axe": "Titan Axe",
+  "item.projectmod.titan_hoe": "Titan Hoe",
+
+  "item.projectmod.titan_helmet": "Titan Helmet",
+  "item.projectmod.titan_chestplate": "Titan Chestplate",
+  "item.projectmod.titan_leggings": "Titan Leggings",
+  "item.projectmod.titan_boots": "Titan Boots"
 }

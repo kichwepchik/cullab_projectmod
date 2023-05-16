@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "projectmod:sapphire_block",
+    "projectmod:sapphire_ore",
+    "projectmod:deepslate_titan_ore",
+    "projectmod:netherrack_titan_ore",
+    "projectmod:titan_block"
+  ]
+}

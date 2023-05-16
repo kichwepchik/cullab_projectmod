@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "projectmod:titan_ingot"
+    }
+  },
+  "pattern": [
+    " XX",
+    " #X",
+    " # "
+  ],
+  "result": {
+    "item": "projectmod:titan_axe"
+  }
+}
