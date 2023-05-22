@@ -1,6 +1,7 @@
 package net.kichwepchik.projectmod.block;
 
 import net.kichwepchik.projectmod.ProjectMod;
+import net.kichwepchik.projectmod.block.custom.JumpyBlock;
 import net.kichwepchik.projectmod.item.ModCreativeModeTab;
 import net.kichwepchik.projectmod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -47,6 +48,11 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(10f).requiresCorrectToolForDrops(),
                     UniformInt.of(10,12)), ModCreativeModeTab.PROJECT_TAB);
+
+
+    public  static final RegistryObject<Block> JUMPY_BLOCK = registerBlock("jumpy_block",
+            ()-> new JumpyBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.PROJECT_TAB);
 
 
 
