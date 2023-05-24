@@ -1,0 +1,11 @@
+{
+  "type": "projectmod:titanium_carver",
+  "ingredients": [
+    {
+      "item": "projectmod:raw_titan"
+    }
+  ],
+  "output": {
+    "item": "projectmod:titan_ingot"
+  }
+}

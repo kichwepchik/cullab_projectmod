@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "projectmod:block/titanium_carver"
+    },
+    "facing=south": {
+      "model": "projectmod:block/titanium_carver",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "projectmod:block/titanium_carver",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "projectmod:block/titanium_carver",
+      "y": 90
+    }
+  }
+}

@@ -1,7 +1,12 @@
 package net.kichwepchik.projectmod.item;
 
 import net.kichwepchik.projectmod.ProjectMod;
+import net.kichwepchik.projectmod.block.ModBlocks;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -55,15 +60,28 @@ public class ModItems {
     public static final  RegistryObject<Item> TITAN_HELMET = ITEMS.register("titan_helmet",
             ()-> new ArmorItem(ModArmorMaterials.TITAN, EquipmentSlot.HEAD,
                     new Item.Properties().tab(ModCreativeModeTab.PROJECT_TAB)));
- public static final  RegistryObject<Item> TITAN_CHESTPLATE = ITEMS.register("titan_chestplate",
+    public static final  RegistryObject<Item> TITAN_CHESTPLATE = ITEMS.register("titan_chestplate",
             ()-> new ArmorItem(ModArmorMaterials.TITAN, EquipmentSlot.CHEST,
                     new Item.Properties().tab(ModCreativeModeTab.PROJECT_TAB)));
- public static final  RegistryObject<Item> TITAN_LEGGING = ITEMS.register("titan_leggings",
+    public static final  RegistryObject<Item> TITAN_LEGGING = ITEMS.register("titan_leggings",
             ()-> new ArmorItem(ModArmorMaterials.TITAN, EquipmentSlot.LEGS,
                     new Item.Properties().tab(ModCreativeModeTab.PROJECT_TAB)));
- public static final  RegistryObject<Item> TITAN_BOOTS = ITEMS.register("titan_boots",
+    public static final  RegistryObject<Item> TITAN_BOOTS = ITEMS.register("titan_boots",
             ()-> new ArmorItem(ModArmorMaterials.TITAN, EquipmentSlot.FEET,
                     new Item.Properties().tab(ModCreativeModeTab.PROJECT_TAB)));
+
+    public static final RegistryObject<Item> STRAWBERRY_SEEDS = ITEMS.register("strawberry_seeds",
+            ()-> new ItemNameBlockItem(ModBlocks.STRAWBERRY_CROP.get(),
+                    new Item.Properties().tab(ModCreativeModeTab.PROJECT_TAB)));
+
+    public static final RegistryObject<Item> STRAWBERRY = ITEMS.register("strawberry",
+            ()-> new Item(new Item.Properties().tab(ModCreativeModeTab.PROJECT_TAB)
+                    .food(new FoodProperties.Builder().nutrition(2).saturationMod(2f).build())));
+
+    public static final RegistryObject<Item> STRAWBERRY_PIE = ITEMS.register("strawberry_pie",
+            ()-> new Item(new Item.Properties().tab(ModCreativeModeTab.PROJECT_TAB)
+                    .food(new FoodProperties.Builder().nutrition(2).saturationMod(0.6f)
+                            .effect(new MobEffectInstance(MobEffects.REGENERATION, 1200, 3),1f).build())));
 
 
 

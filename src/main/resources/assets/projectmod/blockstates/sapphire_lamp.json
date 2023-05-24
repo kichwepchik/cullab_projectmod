@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lit=true": {"model": "projectmod:block/sapphire_lamp_on"},
+    "lit=false": {"model": "projectmod:block/sapphire_lamp_off"}
+  }
+}

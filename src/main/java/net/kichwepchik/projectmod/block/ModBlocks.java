@@ -2,6 +2,9 @@ package net.kichwepchik.projectmod.block;
 
 import net.kichwepchik.projectmod.ProjectMod;
 import net.kichwepchik.projectmod.block.custom.JumpyBlock;
+import net.kichwepchik.projectmod.block.custom.SapphireLampBlock;
+import net.kichwepchik.projectmod.block.custom.StrawberryCropBlock;
+import net.kichwepchik.projectmod.block.custom.TitaniumCarverBlock;
 import net.kichwepchik.projectmod.item.ModCreativeModeTab;
 import net.kichwepchik.projectmod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -9,6 +12,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -54,6 +58,19 @@ public class ModBlocks {
             ()-> new JumpyBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.PROJECT_TAB);
 
+
+    public  static final RegistryObject<Block> SAPPHIRE_LAMP = registerBlock("sapphire_lamp",
+            ()-> new SapphireLampBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f).requiresCorrectToolForDrops().lightLevel(state -> state.getValue(SapphireLampBlock.LIT) ? 15 : 0)), ModCreativeModeTab.PROJECT_TAB);
+
+
+    public  static final RegistryObject<Block> STRAWBERRY_CROP = BLOCKS.register("strawberry_crop",
+            ()-> new StrawberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
+
+
+    public  static final RegistryObject<Block> TITANIUM_CARVER = registerBlock("titanium_carver",
+            ()-> new TitaniumCarverBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(6f).requiresCorrectToolForDrops().noOcclusion()), ModCreativeModeTab.PROJECT_TAB);
 
 
 

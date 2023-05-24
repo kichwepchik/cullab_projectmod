@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "projectmod:block/strawberry_stage5"
+  }
+}
