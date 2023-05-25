@@ -27,8 +27,20 @@
   "item.projectmod.titan_axe": "Titan Axe",
   "item.projectmod.titan_hoe": "Titan Hoe",
 
+  "item.projectmod.titan_upgrade_sword": "Titan Koch Sword",
+  "item.projectmod.titan_upgrade_pickaxe": "Titan Koch Pickaxe",
+  "item.projectmod.titan_upgrade_shovel": "Titan Koch Shovel",
+  "item.projectmod.titan_upgrade_axe": "Titan Koch Axe",
+  "item.projectmod.titan_upgrade_hoe": "Titan Koch Hoe",
+
+
   "item.projectmod.titan_helmet": "Titan Helmet",
   "item.projectmod.titan_chestplate": "Titan Chestplate",
   "item.projectmod.titan_leggings": "Titan Leggings",
-  "item.projectmod.titan_boots": "Titan Boots"
+  "item.projectmod.titan_boots": "Titan Boots",
+
+  "item.projectmod.titan_upgrade_helmet": "Titan Koch Helmet",
+  "item.projectmod.titan_upgrade_chestplate": "Titan Koch Chestplate",
+  "item.projectmod.titan_upgrade_leggings": "Titan Koch Leggings",
+  "item.projectmod.titan_upgrade_boots": "Titan Koch Boots"
 }

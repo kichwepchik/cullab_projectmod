@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0":"projectmod:item/titan_upgrade_hoe"
+  }
+}

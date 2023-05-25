@@ -56,6 +56,23 @@ public class ModItems {
             ()-> new HoeItem(ModTiers.TITAN,2,3f,
                     new Item.Properties().tab(ModCreativeModeTab.PROJECT_TAB)));
 
+    public static final  RegistryObject<Item> TITAN_UPGRADE_SWORD = ITEMS.register("titan_upgrade_sword",
+            ()-> new SwordItem(ModTiers.TITAN_UPGRADE,2,5f,
+                    new Item.Properties().tab(ModCreativeModeTab.PROJECT_TAB)));
+    public static final  RegistryObject<Item> TITAN_UPGRADE_PICKAXE = ITEMS.register("titan_upgrade_pickaxe",
+            ()-> new PickaxeItem(ModTiers.TITAN_UPGRADE,2,5f,
+                    new Item.Properties().tab(ModCreativeModeTab.PROJECT_TAB)));
+    public static final  RegistryObject<Item> TITAN_UPGRADE_SHOVEL = ITEMS.register("titan_upgrade_shovel",
+            ()-> new ShovelItem(ModTiers.TITAN_UPGRADE,2,5f,
+                    new Item.Properties().tab(ModCreativeModeTab.PROJECT_TAB)));
+    public static final  RegistryObject<Item> TITAN_UPGRADE_AXE = ITEMS.register("titan_upgrade_axe",
+            ()-> new AxeItem(ModTiers.TITAN_UPGRADE,2,5f,
+                    new Item.Properties().tab(ModCreativeModeTab.PROJECT_TAB)));
+    public static final  RegistryObject<Item> TITAN_UPGRADE_HOE = ITEMS.register("titan_upgrade_hoe",
+            ()-> new HoeItem(ModTiers.TITAN_UPGRADE,2,5f,
+                    new Item.Properties().tab(ModCreativeModeTab.PROJECT_TAB)));
+
+
 
     public static final  RegistryObject<Item> TITAN_HELMET = ITEMS.register("titan_helmet",
             ()-> new ArmorItem(ModArmorMaterials.TITAN, EquipmentSlot.HEAD,
@@ -69,6 +86,20 @@ public class ModItems {
     public static final  RegistryObject<Item> TITAN_BOOTS = ITEMS.register("titan_boots",
             ()-> new ArmorItem(ModArmorMaterials.TITAN, EquipmentSlot.FEET,
                     new Item.Properties().tab(ModCreativeModeTab.PROJECT_TAB)));
+
+    public static final  RegistryObject<Item> TITAN_UPGRADE_HELMET = ITEMS.register("titan_upgrade_helmet",
+            ()-> new ArmorItem(ModArmorMaterials.TITAN_UPGRADE, EquipmentSlot.HEAD,
+                    new Item.Properties().tab(ModCreativeModeTab.PROJECT_TAB)));
+    public static final  RegistryObject<Item> TITAN_UPGRADE_CHESTPLATE = ITEMS.register("titan_upgrade_chestplate",
+            ()-> new ArmorItem(ModArmorMaterials.TITAN_UPGRADE, EquipmentSlot.CHEST,
+                    new Item.Properties().tab(ModCreativeModeTab.PROJECT_TAB)));
+    public static final  RegistryObject<Item> TITAN_UPGRADE_LEGGING = ITEMS.register("titan_upgrade_leggings",
+            ()-> new ArmorItem(ModArmorMaterials.TITAN_UPGRADE, EquipmentSlot.LEGS,
+                    new Item.Properties().tab(ModCreativeModeTab.PROJECT_TAB)));
+    public static final  RegistryObject<Item> TITAN_UPGRADE_BOOTS = ITEMS.register("titan_upgrade_boots",
+            ()-> new ArmorItem(ModArmorMaterials.TITAN_UPGRADE, EquipmentSlot.FEET,
+                    new Item.Properties().tab(ModCreativeModeTab.PROJECT_TAB)));
+
 
     public static final RegistryObject<Item> STRAWBERRY_SEEDS = ITEMS.register("strawberry_seeds",
             ()-> new ItemNameBlockItem(ModBlocks.STRAWBERRY_CROP.get(),

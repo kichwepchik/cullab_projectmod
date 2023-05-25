@@ -1,0 +1,17 @@
+{
+  "type": "projectmod:titanium_carver",
+  "ingredients": [
+    {
+      "item": "projectmod:ghost_heart"
+    },
+    {
+      "item": "projectmod:titan_boots"
+    },
+    {
+      "item": "projectmod:sapphire"
+    }
+  ],
+  "output": {
+    "item": "projectmod:titan_upgrade_boots"
+  }
+}

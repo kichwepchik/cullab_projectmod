@@ -21,7 +21,7 @@ public class TitaniumCarverMenu extends AbstractContainerMenu {
     }
     public TitaniumCarverMenu(int id, Inventory inv, BlockEntity entity, ContainerData data){
         super(ModMenuTypes.TITANIUM_CARVER_MENU.get(),id);
-        checkContainerSize(inv,3 );
+        checkContainerSize(inv,4 );
         blockEntity = (TitaniumCarverBlockEntity) entity;
         this.level = inv.player.level;
         this.data = data;
@@ -34,6 +34,7 @@ public class TitaniumCarverMenu extends AbstractContainerMenu {
                     this.addSlot(new SlotItemHandler(handler, 0, 12,15));
                     this.addSlot(new SlotItemHandler(handler,1, 86, 15));
                     this.addSlot(new SlotItemHandler(handler, 2, 86,60));
+                    this.addSlot(new SlotItemHandler(handler, 3, 12,60));
                 });
         addDataSlots(data);
 
@@ -69,7 +70,7 @@ public class TitaniumCarverMenu extends AbstractContainerMenu {
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
 
     // THIS YOU HAVE TO DEFINE!
-    private static final int TE_INVENTORY_SLOT_COUNT = 3;  // must be the number of slots you have!
+    private static final int TE_INVENTORY_SLOT_COUNT = 4;  // must be the number of slots you have!
 
 
 

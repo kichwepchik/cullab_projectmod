@@ -1,6 +1,7 @@
 package net.kichwepchik.projectmod.item;
 
 import net.kichwepchik.projectmod.ProjectMod;
+import net.kichwepchik.projectmod.recipe.TitaniumCarverRecipe;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.LazyLoadedValue;
@@ -11,8 +12,15 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-        TITAN ("titan",28, new int[]{2,5,8,3},19, SoundEvents.ARMOR_EQUIP_GOLD,
-                2.0F,0.0F, ()->Ingredient.of(ModItems.TITAN_INGOT.get()));
+        TITAN ("titan",28, new int[]{2,5,8,3},19, SoundEvents.ARMOR_EQUIP_GOLD, 2.0F,0.0F, ()->{
+            return Ingredient.of(ModItems.TITAN_INGOT.get());
+        }),
+
+        TITAN_UPGRADE ("titan",28, new int[]{2,5,8,3},19, SoundEvents.ARMOR_EQUIP_GOLD, 2.0F,0.0F, ()->{
+            return Ingredient.of(ModItems.TITAN_INGOT.get());
+        });
+
+
 
         private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};
         private final String name;

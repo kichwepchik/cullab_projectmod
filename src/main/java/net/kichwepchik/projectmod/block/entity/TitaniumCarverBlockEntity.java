@@ -31,7 +31,7 @@ import java.util.Optional;
 
 public class TitaniumCarverBlockEntity extends BlockEntity implements MenuProvider {
 
-private final ItemStackHandler itemHandler = new ItemStackHandler(3) {
+private final ItemStackHandler itemHandler = new ItemStackHandler(4) {
     @Override
     protected void onContentsChanged(int slot) {
         setChanged();
@@ -42,7 +42,7 @@ private final ItemStackHandler itemHandler = new ItemStackHandler(3) {
 
     protected final ContainerData data;
     private int progress = 0;
-    private int maxProgress = 78;
+    private int maxProgress = 300;
 
     public TitaniumCarverBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.TITANIUM_CARVER.get(), pos, state);
@@ -161,6 +161,7 @@ private final ItemStackHandler itemHandler = new ItemStackHandler(3) {
         if(hasRecipe(pEntity)) {
             pEntity.itemHandler.extractItem(0, 1, false);
             pEntity.itemHandler.extractItem(1, 1, false);
+            pEntity.itemHandler.extractItem(3, 1, false);
 
             pEntity.itemHandler.setStackInSlot(2, new ItemStack(recipe.get().getResultItem().getItem(),
                     pEntity.itemHandler.getStackInSlot(2).getCount() + 1));
