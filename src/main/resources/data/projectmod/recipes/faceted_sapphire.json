@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "projectmod:sapphire_block"
+  },
+  "result": "projectmod:faceted_sapphire"
+}

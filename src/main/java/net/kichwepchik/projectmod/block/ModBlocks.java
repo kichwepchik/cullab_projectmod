@@ -1,10 +1,7 @@
 package net.kichwepchik.projectmod.block;
 
 import net.kichwepchik.projectmod.ProjectMod;
-import net.kichwepchik.projectmod.block.custom.JumpyBlock;
-import net.kichwepchik.projectmod.block.custom.SapphireLampBlock;
-import net.kichwepchik.projectmod.block.custom.StrawberryCropBlock;
-import net.kichwepchik.projectmod.block.custom.TitaniumCarverBlock;
+import net.kichwepchik.projectmod.block.custom.*;
 import net.kichwepchik.projectmod.item.ModCreativeModeTab;
 import net.kichwepchik.projectmod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -56,6 +53,24 @@ public class ModBlocks {
 
     public  static final RegistryObject<Block> JUMPY_BLOCK = registerBlock("jumpy_block",
             ()-> new JumpyBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.PROJECT_TAB);
+    public  static final RegistryObject<Block> IMPETUOSITY_BLOCK = registerBlock("impetuosity_block",
+            ()-> new ImpetuosityBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.PROJECT_TAB);
+    public  static final RegistryObject<Block> REGENERATION_BLOCK = registerBlock("regeneration_block",
+            ()-> new RegenerationBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.PROJECT_TAB);
+    public  static final RegistryObject<Block> POWER_BLOCK = registerBlock("power_block",
+            ()-> new PowerBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.PROJECT_TAB);
+    public  static final RegistryObject<Block> MINING_BLOCK = registerBlock("mining_block",
+            ()-> new MiningBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.PROJECT_TAB);
+    public  static final RegistryObject<Block> FACETED_SAPPHIRE = registerBlock("faceted_sapphire",
+            ()-> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.PROJECT_TAB);
+    public  static final RegistryObject<Block> INACTIVE_EFFECT_BLOCK = registerBlock("inactive_effect_block",
+            ()-> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.PROJECT_TAB);
 
 

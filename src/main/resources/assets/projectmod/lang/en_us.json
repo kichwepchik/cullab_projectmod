@@ -4,10 +4,19 @@
   "block.projectmod.deepslate_titan_ore": "Deepslate Titan Ore",
   "block.projectmod.netherrack_titan_ore": "Nether Titan Ore",
   "block.projectmod.sapphire_ore": "Sapphire Ore",
-  "block.projectmod.jumpy_block": "jumpy block",
   "block.projectmod.sapphire_lamp": "Sapphire Lamp",
   "block.projectmod.strawberry_crop": "Strawberry Crop",
   "block.projectmod.titanium_carver": "Titanium Carver",
+  "block.projectmod.faceted_sapphire": "Faceted Sapphire",
+  "block.projectmod.inactive_effect_block": "Inactive Block",
+
+
+  "block.projectmod.jumpy_block": "jumpy block",
+  "block.projectmod.impetuosity_block": "Impetuosity Block",
+  "block.projectmod.regeneration_block": "Regeneration Block",
+  "block.projectmod.power_block": "Power Block",
+  "block.projectmod.mining_block": "Mining Block",
+
 
   "item.projectmod.sapphire": "sapphire",
   "item.projectmod.raw_titan": "raw titan",

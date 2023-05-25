@@ -1,0 +1,17 @@
+{
+  "type": "projectmod:titanium_carver",
+  "ingredients": [
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "projectmod:inactive_effect_block"
+    },
+    {
+      "item": "projectmod:faceted_sapphire"
+    }
+  ],
+  "output": {
+    "item": "projectmod:impetuosity_block"
+  }
+}

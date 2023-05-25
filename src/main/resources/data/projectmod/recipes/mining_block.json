@@ -1,0 +1,17 @@
+{
+  "type": "projectmod:titanium_carver",
+  "ingredients": [
+    {
+      "item": "projectmod:titan_pickaxe"
+    },
+    {
+      "item": "projectmod:inactive_effect_block"
+    },
+    {
+      "item": "projectmod:faceted_sapphire"
+    }
+  ],
+  "output": {
+    "item": "projectmod:mining_block"
+  }
+}

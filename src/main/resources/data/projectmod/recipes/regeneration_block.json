@@ -1,0 +1,17 @@
+{
+  "type": "projectmod:titanium_carver",
+  "ingredients": [
+    {
+      "item": "minecraft:ghast_tear"
+    },
+    {
+      "item": "projectmod:inactive_effect_block"
+    },
+    {
+      "item": "projectmod:faceted_sapphire"
+    }
+  ],
+  "output": {
+    "item": "projectmod:regeneration_block"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": {"model": "projectmod:block/inactive_effect_block"}
+  }
+}

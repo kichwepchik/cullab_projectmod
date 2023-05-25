@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures":{
+    "all": "projectmod:block/inactive_effect_block"
+  }
+}
