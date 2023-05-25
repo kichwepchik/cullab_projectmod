@@ -66,7 +66,7 @@ private final ItemStackHandler itemHandler = new ItemStackHandler(3) {
 
             @Override
             public int getCount() {
-                return 2;
+                return 3;
             }
         };
     }
@@ -159,6 +159,7 @@ private final ItemStackHandler itemHandler = new ItemStackHandler(3) {
                 .getRecipeFor(TitaniumCarverRecipe.Type.INSTANCE, inventory, level);
 
         if(hasRecipe(pEntity)) {
+            pEntity.itemHandler.extractItem(0, 1, false);
             pEntity.itemHandler.extractItem(1, 1, false);
 
             pEntity.itemHandler.setStackInSlot(2, new ItemStack(recipe.get().getResultItem().getItem(),

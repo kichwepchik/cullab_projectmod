@@ -3,6 +3,9 @@
   "ingredients": [
     {
       "item": "projectmod:raw_titan"
+    },
+    {
+      "item": "minecraft:stick"
     }
   ],
   "output": {
