@@ -66,7 +66,7 @@ private final ItemStackHandler itemHandler = new ItemStackHandler(3) {
 
             @Override
             public int getCount() {
-                return 3;
+                return 2;
             }
         };
     }
