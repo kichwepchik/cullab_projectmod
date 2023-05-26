@@ -37,6 +37,10 @@ public class ModBlocks {
             ()->new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(10f).requiresCorrectToolForDrops()), ModCreativeModeTab.PROJECT_TAB);
 
+    public  static final RegistryObject<Block> SCOUT_DESK = registerBlock("scout_desk",
+            ()->new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(3f).requiresCorrectToolForDrops()), ModCreativeModeTab.PROJECT_TAB);
+
 
     public  static final RegistryObject<Block> NETHERRACK_TITAN_ORE = registerBlock("netherrack_titan_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {
+      "item": "minecraft:cartography_table"
+    },
+    "B": {
+      "item": "minecraft:compass"
+    },
+    "C": {
+      "item": "minecraft:clock"
+    }
+  },
+  "pattern": [
+    "AB ",
+    " C ",
+    "   "
+  ],
+  "result": {
+    "item": "projectmod:scout_desk"
+  }
+}

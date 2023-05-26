@@ -3,10 +3,12 @@ package net.kichwepchik.projectmod;
 import com.mojang.logging.LogUtils;
 import net.kichwepchik.projectmod.block.ModBlocks;
 import net.kichwepchik.projectmod.block.entity.ModBlockEntities;
+import net.kichwepchik.projectmod.entity.ModEntityTypes;
 import net.kichwepchik.projectmod.item.ModItems;
 import net.kichwepchik.projectmod.recipe.ModRecipes;
 import net.kichwepchik.projectmod.screen.ModMenuTypes;
 import net.kichwepchik.projectmod.screen.TitaniumCarverScreen;
+import net.kichwepchik.projectmod.villager.ModVillagers;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -18,6 +20,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import software.bernie.geckolib3.GeckoLib;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(ProjectMod.MOD_ID)
@@ -38,6 +41,10 @@ public class ProjectMod
 
         ModRecipes.register(modEventBus);
 
+        GeckoLib.initialize();
+        ModEntityTypes.register(modEventBus);
+        ModVillagers.register(modEventBus);
+
 
         modEventBus.addListener(this::commonSetup);
 
@@ -48,7 +55,9 @@ public class ProjectMod
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-
+        event.enqueueWork(()->{
+           ModVillagers.registerPOIs();
+        });
     }
 
 

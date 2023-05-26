@@ -9,6 +9,7 @@
   "block.projectmod.titanium_carver": "Titanium Carver",
   "block.projectmod.faceted_sapphire": "Faceted Sapphire",
   "block.projectmod.inactive_effect_block": "Inactive Block",
+  "block.projectmod.scout_desk": "Scout Desk",
 
 
   "block.projectmod.jumpy_block": "jumpy block",
@@ -51,5 +52,11 @@
   "item.projectmod.titan_upgrade_helmet": "Titan Koch Helmet",
   "item.projectmod.titan_upgrade_chestplate": "Titan Koch Chestplate",
   "item.projectmod.titan_upgrade_leggings": "Titan Koch Leggings",
-  "item.projectmod.titan_upgrade_boots": "Titan Koch Boots"
+  "item.projectmod.titan_upgrade_boots": "Titan Koch Boots",
+
+  "entity.minecraft.villager.projectmod.creator": "Creator",
+  "entity.minecraft.villager.projectmod.miner": "Miner",
+  "entity.minecraft.villager.projectmod.seeker": "Seeker",
+  "entity.minecraft.villager.projectmod.architect": "Architect",
+  "entity.minecraft.villager.projectmod.hunter": "Hunter"
 }
