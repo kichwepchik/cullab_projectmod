@@ -81,15 +81,6 @@ import java.util.List;
 public class ModEvents {
     @SubscribeEvent
     public static void addCustomTrades(VillagerTradesEvent event){
-        if(event.getType() == VillagerProfession.TOOLSMITH) {
-            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-            ItemStack stack = new ItemStack(ModItems.SAPPHIRE.get(), 1);
-            int villagerLevel = 1;
-
-            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 2),
-                    stack,10,8,0.02F));
-        }
 
         if(event.getType() == ModVillagers.CREATOR.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
@@ -120,6 +111,7 @@ public class ModEvents {
                     new ItemStack(Items.EMERALD, 1),
                     stack,10,8,0.02F));
         }
+
         if(event.getType() == ModVillagers.HUNTER.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.DIAMOND_SWORD, 1);
@@ -129,6 +121,7 @@ public class ModEvents {
                     new ItemStack(Items.EMERALD, 4),
                     stack,10,8,0.02F));
         }
+
         if(event.getType() == ModVillagers.ARCHITECT.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.SAND, 64);

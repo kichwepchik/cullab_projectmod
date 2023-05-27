@@ -16,7 +16,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
             return Ingredient.of(ModItems.TITAN_INGOT.get());
         }),
 
-        TITAN_UPGRADE ("titan",28, new int[]{2,5,8,3},19, SoundEvents.ARMOR_EQUIP_GOLD, 2.0F,0.0F, ()->{
+        TITAN_UPGRADE ("titan_upgrade",28, new int[]{2,5,8,3},19, SoundEvents.ARMOR_EQUIP_GOLD, 2.0F,0.0F, ()->{
             return Ingredient.of(ModItems.TITAN_INGOT.get());
         });
 
