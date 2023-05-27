@@ -37,6 +37,9 @@ public class ModItems {
     public static final RegistryObject<Item> PIECE_OF_SOUL = ITEMS.register("piece_of_soul",
             ()-> new Item(new Item.Properties().tab(ModCreativeModeTab.PROJECT_TAB)));
 
+    public static final RegistryObject<Item> SOUL_OF_GHOST = ITEMS.register("soul_of_ghost",
+            ()-> new Item(new Item.Properties().tab(ModCreativeModeTab.PROJECT_TAB)));
+
 
 
 

@@ -27,6 +27,7 @@
   "item.projectmod.strawberry": "Strawberry",
   "item.projectmod.strawberry_seeds": "Strawberry Seeds",
   "item.projectmod.strawberry_pie": "Strawberry Pie",
+  "item.projectmod.soul_of_ghost": "Soul",
 
 
   "itemGroup.projectmod": "Coollub",
@@ -58,5 +59,8 @@
   "entity.minecraft.villager.projectmod.miner": "Miner",
   "entity.minecraft.villager.projectmod.seeker": "Seeker",
   "entity.minecraft.villager.projectmod.architect": "Architect",
-  "entity.minecraft.villager.projectmod.hunter": "Hunter"
+  "entity.minecraft.villager.projectmod.hunter": "Hunter",
+
+  "key.category.projectmod.project": "Collub",
+  "key.projectmod.nothing": "That's Nothing!"
 }

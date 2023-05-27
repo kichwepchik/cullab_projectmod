@@ -5,6 +5,7 @@ import net.kichwepchik.projectmod.block.ModBlocks;
 import net.kichwepchik.projectmod.block.entity.ModBlockEntities;
 import net.kichwepchik.projectmod.entity.ModEntityTypes;
 import net.kichwepchik.projectmod.item.ModItems;
+import net.kichwepchik.projectmod.networking.ModMessages;
 import net.kichwepchik.projectmod.recipe.ModRecipes;
 import net.kichwepchik.projectmod.screen.ModMenuTypes;
 import net.kichwepchik.projectmod.screen.TitaniumCarverScreen;
@@ -58,6 +59,8 @@ public class ProjectMod
         event.enqueueWork(()->{
            ModVillagers.registerPOIs();
         });
+
+        ModMessages.register();
     }
 
 
@@ -69,6 +72,7 @@ public class ProjectMod
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.STRAWBERRY_CROP.get(), RenderType.cutout());
+
             MenuScreens.register(ModMenuTypes.TITANIUM_CARVER_MENU.get(), TitaniumCarverScreen::new);
         }
     }
