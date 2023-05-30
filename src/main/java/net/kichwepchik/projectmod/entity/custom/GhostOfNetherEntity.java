@@ -15,6 +15,7 @@ import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.animal.IronGolem;
 import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.monster.piglin.Piglin;
 import net.minecraft.world.entity.npc.AbstractVillager;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
@@ -28,47 +29,45 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class ChomperEntity extends Monster implements IAnimatable {
-
+public class GhostOfNetherEntity extends Monster implements IAnimatable {
     private AnimationFactory factory = new AnimationFactory(this);
-    public ChomperEntity(EntityType<? extends Monster> pEntityType, Level pLevel) {
+    public GhostOfNetherEntity(EntityType<? extends Monster> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }
 
     public static AttributeSupplier setAttributes() {
         return Monster.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 20.0D)
-                .add(Attributes.ATTACK_DAMAGE, 3.0f)
-                .add(Attributes.ATTACK_SPEED, 1.0f)
-                .add(Attributes.MOVEMENT_SPEED, 0.4f).build();
+                .add(Attributes.MAX_HEALTH, 40.0D)
+                .add(Attributes.ATTACK_DAMAGE, 5.0f)
+                .add(Attributes.ATTACK_SPEED, 0.5f)
+                .add(Attributes.MOVEMENT_SPEED, 0.2f).build();
     }
 
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(1, new FloatGoal(this));
-        this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2D, false));
+        this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1D, false));
         this.goalSelector.addGoal(4, new WaterAvoidingRandomStrollGoal(this, 1.0D));
         this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
 
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
-        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AbstractVillager.class, false));
+        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Piglin.class, false));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, IronGolem.class, true));
-        this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, Creeper.class, true));
     }
 
     private <E extends IAnimatable>PlayState predicate(AnimationEvent<E> event){
         if (event.isMoving()){
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.chomper.walk",true));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.ghost_of_nether.walk",true));
             return PlayState.CONTINUE;
         }
 
-        event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.chomper.idle",true));
+        event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.ghost_of_nether.idle",true));
         return PlayState.CONTINUE;
     }
     private PlayState attackPredicate(AnimationEvent event) {
         if (this.swinging && event.getController().getAnimationState().equals(AnimationState.Stopped)){
             event.getController().markNeedsReload();
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.chomper.attack",false));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.ghost_of_nether.attack",false));
             this.swinging = false;
         }
 

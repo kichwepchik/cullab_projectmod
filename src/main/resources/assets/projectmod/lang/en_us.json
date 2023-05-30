@@ -62,5 +62,10 @@
   "entity.minecraft.villager.projectmod.hunter": "Hunter",
 
   "key.category.projectmod.project": "Collub",
-  "key.projectmod.nothing": "That's Nothing!"
+  "key.projectmod.nothing": "That's Nothing!",
+
+
+
+  "item.projectmod.chomper_spawn_egg": "Chomper Spawn Egg",
+  "item.projectmod.ghost_of_nether_spawn_egg": "Ghost Of Nether Spawn Egg"
 }

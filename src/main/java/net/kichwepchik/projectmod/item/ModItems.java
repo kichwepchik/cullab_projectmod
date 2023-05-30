@@ -2,12 +2,14 @@ package net.kichwepchik.projectmod.item;
 
 import net.kichwepchik.projectmod.ProjectMod;
 import net.kichwepchik.projectmod.block.ModBlocks;
+import net.kichwepchik.projectmod.entity.ModEntityTypes;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -116,6 +118,17 @@ public class ModItems {
             ()-> new Item(new Item.Properties().tab(ModCreativeModeTab.PROJECT_TAB)
                     .food(new FoodProperties.Builder().nutrition(2).saturationMod(0.6f)
                             .effect(new MobEffectInstance(MobEffects.REGENERATION, 1200, 3),1f).build())));
+
+
+    public static final RegistryObject<Item> CHOMPER_SPAWN_EGG = ITEMS.register("chomper_spawn_egg",
+            ()-> new ForgeSpawnEggItem(ModEntityTypes.CHOMPER, 0x22b341, 0x19732e,
+                    new Item.Properties().tab(ModCreativeModeTab.PROJECT_TAB)));
+
+
+    public static final RegistryObject<Item> GHOST_OF_NETHER_SPAWN_EGG = ITEMS.register("ghost_of_nether_spawn_egg",
+            ()-> new ForgeSpawnEggItem(ModEntityTypes.GHOST_OF_NETHER, 0x090909, 0x16badb,
+                    new Item.Properties().tab(ModCreativeModeTab.PROJECT_TAB)));
+
 
 
 

@@ -4,6 +4,8 @@ import com.mojang.logging.LogUtils;
 import net.kichwepchik.projectmod.block.ModBlocks;
 import net.kichwepchik.projectmod.block.entity.ModBlockEntities;
 import net.kichwepchik.projectmod.entity.ModEntityTypes;
+import net.kichwepchik.projectmod.entity.client.ChomperRenderer;
+import net.kichwepchik.projectmod.entity.client.GhostOfNetherRenderer;
 import net.kichwepchik.projectmod.item.ModItems;
 import net.kichwepchik.projectmod.networking.ModMessages;
 import net.kichwepchik.projectmod.recipe.ModRecipes;
@@ -13,6 +15,7 @@ import net.kichwepchik.projectmod.villager.ModVillagers;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -74,6 +77,10 @@ public class ProjectMod
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.STRAWBERRY_CROP.get(), RenderType.cutout());
 
             MenuScreens.register(ModMenuTypes.TITANIUM_CARVER_MENU.get(), TitaniumCarverScreen::new);
+            EntityRenderers.register(ModEntityTypes.CHOMPER.get(), ChomperRenderer::new);
+
+            EntityRenderers.register(ModEntityTypes.GHOST_OF_NETHER.get(), GhostOfNetherRenderer::new);
+
         }
     }
 }

@@ -3,6 +3,9 @@ package net.kichwepchik.projectmod.event;
 
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.kichwepchik.projectmod.ProjectMod;
+import net.kichwepchik.projectmod.entity.ModEntityTypes;
+import net.kichwepchik.projectmod.entity.custom.ChomperEntity;
+import net.kichwepchik.projectmod.entity.custom.GhostOfNetherEntity;
 import net.kichwepchik.projectmod.item.ModItems;
 import net.kichwepchik.projectmod.villager.ModVillagers;
 import net.minecraft.world.entity.npc.VillagerProfession;
@@ -10,6 +13,7 @@ import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.trading.MerchantOffer;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -77,61 +81,75 @@ import java.util.List;
 //        }
 //    }
 //}
-@Mod.EventBusSubscriber(modid = ProjectMod.MOD_ID)
+
 public class ModEvents {
-    @SubscribeEvent
-    public static void addCustomTrades(VillagerTradesEvent event){
+    @Mod.EventBusSubscriber(modid = ProjectMod.MOD_ID)
+    public class ForgeEvents{
+        @SubscribeEvent
+        public static void addCustomTrades(VillagerTradesEvent event){
 
-        if(event.getType() == ModVillagers.CREATOR.get()) {
-            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-            ItemStack stack = new ItemStack(ModItems.SAPPHIRE.get(), 1);
-            int villagerLevel = 1;
+            if(event.getType() == ModVillagers.CREATOR.get()) {
+                Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+                ItemStack stack = new ItemStack(ModItems.SAPPHIRE.get(), 1);
+                int villagerLevel = 1;
 
-            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 2),
-                    stack,10,8,0.02F));
-        }
+                trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                        new ItemStack(Items.EMERALD, 2),
+                        stack,10,8,0.02F));
+            }
 
-        if(event.getType() == ModVillagers.MINER.get()) {
-            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-            ItemStack stack = new ItemStack(Items.DIAMOND_PICKAXE, 1);
-            int villagerLevel = 1;
+            if(event.getType() == ModVillagers.MINER.get()) {
+                Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+                ItemStack stack = new ItemStack(Items.DIAMOND_PICKAXE, 1);
+                int villagerLevel = 1;
 
-            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 3),
-                    stack,10,8,0.02F));
-        }
+                trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                        new ItemStack(Items.EMERALD, 3),
+                        stack,10,8,0.02F));
+            }
 
-        if(event.getType() == ModVillagers.SEEKER.get()) {
-            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-            ItemStack stack = new ItemStack(Items.ENDER_PEARL, 10);
-            int villagerLevel = 1;
+            if(event.getType() == ModVillagers.SEEKER.get()) {
+                Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+                ItemStack stack = new ItemStack(Items.ENDER_PEARL, 10);
+                int villagerLevel = 1;
 
-            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 1),
-                    stack,10,8,0.02F));
-        }
+                trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                        new ItemStack(Items.EMERALD, 1),
+                        stack,10,8,0.02F));
+            }
 
-        if(event.getType() == ModVillagers.HUNTER.get()) {
-            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-            ItemStack stack = new ItemStack(Items.DIAMOND_SWORD, 1);
-            int villagerLevel = 1;
+            if(event.getType() == ModVillagers.HUNTER.get()) {
+                Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+                ItemStack stack = new ItemStack(Items.DIAMOND_SWORD, 1);
+                int villagerLevel = 1;
 
-            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 4),
-                    stack,10,8,0.02F));
-        }
+                trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                        new ItemStack(Items.EMERALD, 4),
+                        stack,10,8,0.02F));
+            }
 
-        if(event.getType() == ModVillagers.ARCHITECT.get()) {
-            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-            ItemStack stack = new ItemStack(Items.SAND, 64);
-            int villagerLevel = 1;
+            if(event.getType() == ModVillagers.ARCHITECT.get()) {
+                Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+                ItemStack stack = new ItemStack(Items.SAND, 64);
+                int villagerLevel = 1;
 
-            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 1),
-                    stack,10,8,0.02F));
+                trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                        new ItemStack(Items.EMERALD, 1),
+                        stack,10,8,0.02F));
+            }
         }
     }
+    @Mod.EventBusSubscriber(modid = ProjectMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+    public static class ModEventBusEvents{
+        @SubscribeEvent
+        public static void entityAttributeEvent(EntityAttributeCreationEvent event){
+            event.put(ModEntityTypes.CHOMPER.get(), ChomperEntity.setAttributes());
+            event.put(ModEntityTypes.GHOST_OF_NETHER.get(), GhostOfNetherEntity.setAttributes());
+        }
+
+
+    }
+
 }
 
 
