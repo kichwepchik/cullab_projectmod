@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "projectmod:piece_of_soul"
+    },
+    "A": {
+      "item": "minecraft:ghast_tear"
+    }
+  },
+  "pattern": [
+    "AXA",
+    "XXX",
+    "AXA"
+  ],
+  "result": {
+    "item": "projectmod:soul_of_ghost"
+  }
+}

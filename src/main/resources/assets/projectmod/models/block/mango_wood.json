@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "projectmod:block/mango_log",
+    "side": "projectmod:block/mango_log"
+  }
+}

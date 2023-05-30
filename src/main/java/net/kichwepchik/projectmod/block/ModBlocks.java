@@ -4,13 +4,16 @@ import net.kichwepchik.projectmod.ProjectMod;
 import net.kichwepchik.projectmod.block.custom.*;
 import net.kichwepchik.projectmod.item.ModCreativeModeTab;
 import net.kichwepchik.projectmod.item.ModItems;
+import net.kichwepchik.projectmod.world.feature.tree.MangoTreeGrower;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.DropExperienceBlock;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -48,11 +51,14 @@ public class ModBlocks {
                     UniformInt.of(10,12)), ModCreativeModeTab.PROJECT_TAB);
 
 
-
     public  static final RegistryObject<Block> DEEPSLATE_TITAN_ORE = registerBlock("deepslate_titan_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(10f).requiresCorrectToolForDrops(),
                     UniformInt.of(10,12)), ModCreativeModeTab.PROJECT_TAB);
+
+    public  static final RegistryObject<Block> FLOWER_EARTH_BLOCK = registerBlock("flower_earth_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.GRASS).sound(SoundType.GRASS)
+                    .strength(10f).requiresCorrectToolForDrops()), ModCreativeModeTab.PROJECT_TAB);
 
 
     public  static final RegistryObject<Block> JUMPY_BLOCK = registerBlock("jumpy_block",
@@ -90,6 +96,62 @@ public class ModBlocks {
     public  static final RegistryObject<Block> TITANIUM_CARVER = registerBlock("titanium_carver",
             ()-> new TitaniumCarverBlock(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(6f).requiresCorrectToolForDrops().noOcclusion()), ModCreativeModeTab.PROJECT_TAB);
+
+
+
+    public  static final RegistryObject<Block> MANGO_LOG = registerBlock("mango_log",
+            ()-> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)
+                    .requiresCorrectToolForDrops()), ModCreativeModeTab.PROJECT_TAB);
+    public  static final RegistryObject<Block> MANGO_WOOD = registerBlock("mango_wood",
+            ()-> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)
+                    .requiresCorrectToolForDrops()), ModCreativeModeTab.PROJECT_TAB);
+    public  static final RegistryObject<Block> STRIPPED_MANGO_LOG = registerBlock("stripped_mango_log",
+            ()-> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)
+                    .requiresCorrectToolForDrops()), ModCreativeModeTab.PROJECT_TAB);
+    public  static final RegistryObject<Block> STRIPPED_MANGO_WOOD = registerBlock("stripped_mango_wood",
+            ()-> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)
+                    .requiresCorrectToolForDrops()), ModCreativeModeTab.PROJECT_TAB);
+    public  static final RegistryObject<Block> MANGO_LEAVES = registerBlock("mango_leaves",
+            ()-> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).strength(0.4f)
+                    .requiresCorrectToolForDrops()){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 30;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 60;
+                }
+            }, ModCreativeModeTab.PROJECT_TAB);
+    public  static final RegistryObject<Block> MANGO_PLANKS = registerBlock("mango_planks",
+            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
+                    .requiresCorrectToolForDrops()){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 5;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 20;
+                }
+            }, ModCreativeModeTab.PROJECT_TAB);
+    public  static final RegistryObject<Block> MANGO_SAPLING = registerBlock("mango_sapling",
+            ()-> new ModSaplingBlock(new MangoTreeGrower(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING),
+                    ()->ModBlocks.FLOWER_EARTH_BLOCK.get()),ModCreativeModeTab.PROJECT_TAB);
+
 
 
 

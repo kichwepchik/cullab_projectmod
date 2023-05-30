@@ -13,6 +13,7 @@ import net.minecraftforge.fml.util.ObfuscationReflectionHelper;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import org.checkerframework.checker.units.qual.A;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -30,17 +31,17 @@ public class ModVillagers {
     public static final RegistryObject<PoiType> TITANIUM_CARVER_POI = POI_TYPES.register("titanium_carver_poi",
             ()-> new PoiType(ImmutableSet.copyOf(ModBlocks.TITANIUM_CARVER.get().getStateDefinition().getPossibleStates()),
                     1,1));
-    public static final RegistryObject<PoiType> CRAFTING_TABLE_POI = POI_TYPES.register("crafting_table_poi",
-            ()-> new PoiType(ImmutableSet.copyOf(Blocks.CRAFTING_TABLE.getStateDefinition().getPossibleStates()),
+    public static final RegistryObject<PoiType> ANVIL_POI = POI_TYPES.register("anvil_poi",
+            ()-> new PoiType(ImmutableSet.copyOf(Blocks.ANVIL.getStateDefinition().getPossibleStates()),
                     1,2));
     public static final RegistryObject<PoiType> SCOUT_DESK_POI = POI_TYPES.register("scout_desk_poi",
             ()-> new PoiType(ImmutableSet.copyOf(ModBlocks.SCOUT_DESK.get().getStateDefinition().getPossibleStates()),
                     1,1));
-    public static final RegistryObject<PoiType> ANVIL_POI = POI_TYPES.register("anvil_poi",
-            ()-> new PoiType(ImmutableSet.copyOf(Blocks.ANVIL.getStateDefinition().getPossibleStates()),
+    public static final RegistryObject<PoiType> CAMPFIRE_POI = POI_TYPES.register("campfire_poi",
+            ()-> new PoiType(ImmutableSet.copyOf(Blocks.CAMPFIRE.getStateDefinition().getPossibleStates()),
                     1,1));
-    public static final RegistryObject<PoiType> NOTE_BLOCK_POI = POI_TYPES.register("note_block_poi",
-            ()-> new PoiType(ImmutableSet.copyOf(Blocks.NOTE_BLOCK.getStateDefinition().getPossibleStates()),
+    public static final RegistryObject<PoiType> CRAFTING_TABLE_POI = POI_TYPES.register("crafting_table_poi",
+            ()-> new PoiType(ImmutableSet.copyOf(Blocks.CRAFTING_TABLE.getStateDefinition().getPossibleStates()),
                     1,1));
 
 
@@ -53,8 +54,8 @@ public class ModVillagers {
                     SoundEvents.VILLAGER_WORK_ARMORER));
 
     public static final RegistryObject<VillagerProfession> MINER = VILLAGER_PROFESSIONS.register("miner",
-            ()-> new VillagerProfession("miner", x ->x.get() == CRAFTING_TABLE_POI.get(),
-                    x -> x.get() == CRAFTING_TABLE_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
+            ()-> new VillagerProfession("miner", x ->x.get() == ANVIL_POI.get(),
+                    x -> x.get() == ANVIL_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
                     SoundEvents.VILLAGER_WORK_BUTCHER));
 
     public static final RegistryObject<VillagerProfession> SEEKER = VILLAGER_PROFESSIONS.register("seeker",
@@ -63,12 +64,12 @@ public class ModVillagers {
                     SoundEvents.VILLAGER_WORK_BUTCHER));
 
     public static final RegistryObject<VillagerProfession> HUNTER = VILLAGER_PROFESSIONS.register("hunter",
-            ()-> new VillagerProfession("hunter", x ->x.get() == ANVIL_POI.get(),
-                    x -> x.get() == ANVIL_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
+            ()-> new VillagerProfession("hunter", x ->x.get() == CAMPFIRE_POI.get(),
+                    x -> x.get() == CAMPFIRE_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
                     SoundEvents.VILLAGER_WORK_BUTCHER));
     public static final RegistryObject<VillagerProfession> ARCHITECT = VILLAGER_PROFESSIONS.register("architect",
-            ()-> new VillagerProfession("architect", x ->x.get() == NOTE_BLOCK_POI.get(),
-                    x -> x.get() == NOTE_BLOCK_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
+            ()-> new VillagerProfession("architect", x ->x.get() == CRAFTING_TABLE_POI.get(),
+                    x -> x.get() == CRAFTING_TABLE_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
                     SoundEvents.VILLAGER_WORK_BUTCHER));
 
 
@@ -86,7 +87,7 @@ public class ModVillagers {
         }
         try {
             ObfuscationReflectionHelper.findMethod(PoiType.class,
-                    "registerBlockStates", PoiType.class).invoke(null, CRAFTING_TABLE_POI.get ());
+                    "registerBlockStates", PoiType.class).invoke(null, ANVIL_POI.get ());
         } catch (InvocationTargetException | IllegalAccessException exception){
             exception.printStackTrace();
         }
@@ -98,13 +99,13 @@ public class ModVillagers {
         }
         try {
             ObfuscationReflectionHelper.findMethod(PoiType.class,
-                    "registerBlockStates", PoiType.class).invoke(null, ANVIL_POI.get ());
+                    "registerBlockStates", PoiType.class).invoke(null, CAMPFIRE_POI.get ());
         } catch (InvocationTargetException | IllegalAccessException exception){
             exception.printStackTrace();
         }
         try {
             ObfuscationReflectionHelper.findMethod(PoiType.class,
-                    "registerBlockStates", PoiType.class).invoke(null, NOTE_BLOCK_POI.get ());
+                    "registerBlockStates", PoiType.class).invoke(null, CRAFTING_TABLE_POI.get ());
         } catch (InvocationTargetException | IllegalAccessException exception){
             exception.printStackTrace();
         }

@@ -18,7 +18,7 @@ import java.util.Objects;
 
 @JeiPlugin
 public class JEIProjectModPlugin implements IModPlugin {
-    public static RecipeType<TitaniumCarverRecipe> CARVER_TYPE =
+    public static RecipeType<TitaniumCarverRecipe> TITANIUM_CARVER_TYPE =
             new RecipeType<>(TitaniumCarverRecipeCategory.UID, TitaniumCarverRecipe.class);
 
 
@@ -36,7 +36,7 @@ public class JEIProjectModPlugin implements IModPlugin {
         RecipeManager rm = Objects.requireNonNull(Minecraft.getInstance().level).getRecipeManager();
 
         List<TitaniumCarverRecipe> recipesCarver = rm.getAllRecipesFor(TitaniumCarverRecipe.Type.INSTANCE);
-        registration.addRecipes(CARVER_TYPE, recipesCarver);
+        registration.addRecipes(TITANIUM_CARVER_TYPE, recipesCarver);
     }
 
 }

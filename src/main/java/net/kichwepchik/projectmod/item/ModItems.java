@@ -110,6 +110,10 @@ public class ModItems {
             ()-> new ItemNameBlockItem(ModBlocks.STRAWBERRY_CROP.get(),
                     new Item.Properties().tab(ModCreativeModeTab.PROJECT_TAB)));
 
+    public static final RegistryObject<Item> MANGO = ITEMS.register("mango",
+            ()-> new Item(new Item.Properties().tab(ModCreativeModeTab.PROJECT_TAB)
+                    .food(new FoodProperties.Builder().nutrition(2).saturationMod(2f).build())));
+
     public static final RegistryObject<Item> STRAWBERRY = ITEMS.register("strawberry",
             ()-> new Item(new Item.Properties().tab(ModCreativeModeTab.PROJECT_TAB)
                     .food(new FoodProperties.Builder().nutrition(2).saturationMod(2f).build())));

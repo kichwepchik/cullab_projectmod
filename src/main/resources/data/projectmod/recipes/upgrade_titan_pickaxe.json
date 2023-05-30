@@ -2,7 +2,7 @@
   "type": "projectmod:titanium_carver",
   "ingredients": [
     {
-      "item": "projectmod:ghost_heart"
+      "item": "projectmod:soul_of_ghost"
     },
     {
       "item": "projectmod:titan_pickaxe"

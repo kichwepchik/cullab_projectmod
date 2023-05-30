@@ -1,6 +1,12 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "projectmod:block/scout_desk"
+    "down": "minecraft:block/dark_oak_planks",
+    "east": "projectmod:block/scout_desk_side3",
+    "north": "projectmod:block/scout_desk_side3",
+    "particle": "projectmod:block/scout_desk_side3",
+    "south": "projectmod:block/scout_desk_side1",
+    "up": "projectmod:block/scout_desk_top",
+    "west": "projectmod:block/scout_desk_side2"
   }
 }

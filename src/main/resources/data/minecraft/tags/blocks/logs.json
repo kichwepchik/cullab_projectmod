@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "projectmod:mango_log",
+    "projectmod:mango_wood",
+    "projectmod:stripped_mango_log",
+    "projectmod:stripped_mango_wood"
+  ]
+}

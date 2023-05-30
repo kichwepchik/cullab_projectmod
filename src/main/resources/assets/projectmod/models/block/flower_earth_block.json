@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "projectmod:block/flower_earth_block_top",
+    "side": "projectmod:block/flower_earth_block_side"
+  }
+}

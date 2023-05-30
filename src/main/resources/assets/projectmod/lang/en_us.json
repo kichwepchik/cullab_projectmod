@@ -10,6 +10,7 @@
   "block.projectmod.faceted_sapphire": "Faceted Sapphire",
   "block.projectmod.inactive_effect_block": "Inactive Block",
   "block.projectmod.scout_desk": "Scout Desk",
+  "block.projectmod.flower_earth_block": "Flower Grass Block",
 
 
   "block.projectmod.jumpy_block": "jumpy block",
@@ -28,6 +29,7 @@
   "item.projectmod.strawberry_seeds": "Strawberry Seeds",
   "item.projectmod.strawberry_pie": "Strawberry Pie",
   "item.projectmod.soul_of_ghost": "Soul",
+  "item.projectmod.mango": "Mango",
 
 
   "itemGroup.projectmod": "Coollub",
@@ -67,5 +69,13 @@
 
 
   "item.projectmod.chomper_spawn_egg": "Chomper Spawn Egg",
-  "item.projectmod.ghost_of_nether_spawn_egg": "Ghost Of Nether Spawn Egg"
+  "item.projectmod.ghost_of_nether_spawn_egg": "Ghost Of Nether Spawn Egg",
+
+  "block.projectmod.mango_log": "Mango Log",
+  "block.projectmod.mango_planks": "Mango Planks",
+  "block.projectmod.mango_wood": "Mango Wood",
+  "block.projectmod.stripped_mango_log": "Stripped Mango Log",
+  "block.projectmod.stripped_mango_wood": "Stripped Mango Wood",
+  "block.projectmod.mango_leaves": "Mango Leaves",
+  "block.projectmod.mango_sapling": "Mango Sapling"
 }

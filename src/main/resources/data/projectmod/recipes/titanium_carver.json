@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {
+      "item": "projectmod:titan_ingot"
+    },
+    "B": {
+      "item": "projectmod:sapphire"
+    },
+    "C": {
+      "item": "minecraft:iron_ingot"
+    },
+    "D": {
+      "item": "minecraft:blaze_rod"
+    }
+  },
+  "pattern": [
+    "CBC",
+    "CDC",
+    "AAA"
+  ],
+  "result": {
+    "item": "projectmod:titanium_carver"
+  }
+}

@@ -5,6 +5,17 @@
     "projectmod:sapphire_ore",
     "projectmod:deepslate_titan_ore",
     "projectmod:netherrack_titan_ore",
-    "projectmod:titan_block"
+    "projectmod:titan_block",
+    "projectmod:jumpy_block",
+    "projectmod:impetuosity_block",
+    "projectmod:power_block",
+    "projectmod:mining_block",
+    "projectmod:inactive_effect_block",
+    "projectmod:scout_desk",
+    "projectmod:titanium_carver",
+    "projectmod:faceted_sapphire",
+    "projectmod:sapphire_lamp",
+    "projectmod:regeneration_block"
+
   ]
 }
