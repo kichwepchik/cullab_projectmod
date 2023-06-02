@@ -1,6 +1,12 @@
 {
   "parent": "block/cube_all",
   "textures":{
-    "all": "projectmod:block/regeneration_block"
+    "down": "projectmod:block/regeneration_block_side1",
+    "east": "projectmod:block/regeneration_block_side1",
+    "north": "projectmod:block/regeneration_block_side1",
+    "particle": "projectmod:block/regeneration_block_side1",
+    "south": "projectmod:block/regeneration_block_side1",
+    "up": "projectmod:block/regeneration_block_top",
+    "west": "projectmod:block/regeneration_block_side1"
   }
 }

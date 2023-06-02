@@ -1,6 +1,12 @@
 {
   "parent": "block/cube_all",
   "textures":{
-    "all": "projectmod:block/impetuosity_block"
+    "down": "projectmod:block/impetuosity_block_side1",
+    "east": "projectmod:block/impetuosity_block_side1",
+    "north": "projectmod:block/impetuosity_block_side1",
+    "particle": "projectmod:block/impetuosity_block_side1",
+    "south": "projectmod:block/impetuosity_block_side1",
+    "up": "projectmod:block/impetuosity_block_top",
+    "west": "projectmod:block/impetuosity_block_side1"
   }
 }

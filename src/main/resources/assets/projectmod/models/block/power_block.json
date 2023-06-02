@@ -1,6 +1,12 @@
 {
   "parent": "block/cube_all",
   "textures":{
-    "all": "projectmod:block/power_block"
+    "down": "projectmod:block/power_block_side1",
+    "east": "projectmod:block/power_block_side1",
+    "north": "projectmod:block/power_block_side1",
+    "particle": "projectmod:block/power_block_side1",
+    "south": "projectmod:block/power_block_side1",
+    "up": "projectmod:block/power_block_top",
+    "west": "projectmod:block/power_block_side1"
   }
 }

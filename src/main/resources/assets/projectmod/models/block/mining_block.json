@@ -1,6 +1,12 @@
 {
   "parent": "block/cube_all",
   "textures":{
-    "all": "projectmod:block/mining_block"
+    "down": "projectmod:block/mining_block_side1",
+    "east": "projectmod:block/mining_block_side1",
+    "north": "projectmod:block/mining_block_side1",
+    "particle": "projectmod:block/mining_block_side1",
+    "south": "projectmod:block/mining_block_side1",
+    "up": "projectmod:block/mining_block_top",
+    "west": "projectmod:block/mining_block_side1"
   }
 }

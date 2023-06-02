@@ -1,6 +1,12 @@
 {
   "parent": "block/cube_all",
   "textures":{
-    "all": "projectmod:block/jumpy_block"
+    "down": "projectmod:block/jumpy_block_side1",
+    "east": "projectmod:block/jumpy_block_side1",
+    "north": "projectmod:block/jumpy_block_side1",
+    "particle": "projectmod:block/jumpy_block_side1",
+    "south": "projectmod:block/jumpy_block_side1",
+    "up": "projectmod:block/jumpy_block_top",
+    "west": "projectmod:block/jumpy_block_side1"
   }
 }
