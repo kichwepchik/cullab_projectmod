@@ -28,21 +28,20 @@ public class ModConfiguredFeatures {
     public static final DeferredRegister<ConfiguredFeature<?,?>> CONFIGURED_FEATURES =
             DeferredRegister.create(Registry.CONFIGURED_FEATURE_REGISTRY, ProjectMod.MOD_ID);
 
-    public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_TITAN_ORES = Suppliers.memoize(() -> List.of(
+    public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_COLLUB_ORES = Suppliers.memoize(() -> List.of(
+            OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.SAPPHIRE_ORE.get().defaultBlockState()),
             OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_TITAN_ORE.get().defaultBlockState())));
     public static final Supplier<List<OreConfiguration.TargetBlockState>> NETHER_TITAN_ORES = Suppliers.memoize(() -> List.of(
             OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, ModBlocks.NETHERRACK_TITAN_ORE.get().defaultBlockState())));
-    public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_SAPPHIRE_ORES = Suppliers.memoize(() -> List.of(
-            OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.SAPPHIRE_ORE.get().defaultBlockState())));
 
 
 
-    public static final RegistryObject<ConfiguredFeature<?,?>> TITAN_ORE = CONFIGURED_FEATURES.register("titan_ore",
-            ()-> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_TITAN_ORES.get(), 7)));
+
+    public static final RegistryObject<ConfiguredFeature<?,?>> COLLUB_ORE = CONFIGURED_FEATURES.register("collub_ore",
+            ()-> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_COLLUB_ORES.get(), 7)));
     public static final RegistryObject<ConfiguredFeature<?, ?>> NETHER_TITAN_ORE = CONFIGURED_FEATURES.register("nether_titan_ore",
             () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(NETHER_TITAN_ORES.get(), 9)));
-    public static final RegistryObject<ConfiguredFeature<?,?>> SAPPHIRE_ORE = CONFIGURED_FEATURES.register("sapphire_ore",
-            ()-> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_SAPPHIRE_ORES.get(), 8)));
+
 
     public static final RegistryObject<ConfiguredFeature<?,?>> MANGO =
             CONFIGURED_FEATURES.register("mango", () ->

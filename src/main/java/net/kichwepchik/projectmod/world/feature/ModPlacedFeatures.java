@@ -17,8 +17,8 @@ public class ModPlacedFeatures {
     public static final DeferredRegister<PlacedFeature> PLACED_FEATURES =
             DeferredRegister.create(Registry.PLACED_FEATURE_REGISTRY, ProjectMod.MOD_ID);
 
-    public static final RegistryObject<PlacedFeature> TITAN_ORE_PLACED = PLACED_FEATURES.register("titan_ore_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.TITAN_ORE.getHolder().get(),
+    public static final RegistryObject<PlacedFeature> COLLUB_ORE_PLACED = PLACED_FEATURES.register("collub_ore_placed",
+            () -> new PlacedFeature(ModConfiguredFeatures.COLLUB_ORE.getHolder().get(),
                     commonOrePlacement(20, // VeinsPerChunk
                             HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
 
@@ -27,10 +27,6 @@ public class ModPlacedFeatures {
                     commonOrePlacement(7, // VeinsPerChunk
                         HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
 
-    public static final RegistryObject<PlacedFeature> SAPPHIRE_ORE_PLACED = PLACED_FEATURES.register("sapphire_ore_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.SAPPHIRE_ORE.getHolder().get(),
-                    commonOrePlacement(30, // VeinsPerChunk
-                            HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-3), VerticalAnchor.aboveBottom(50)))));
 
 
     public static final RegistryObject<PlacedFeature> MANGO_CHECKED =

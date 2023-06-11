@@ -113,6 +113,11 @@ public class ModItems {
     public static final RegistryObject<Item> MANGO = ITEMS.register("mango",
             ()-> new Item(new Item.Properties().tab(ModCreativeModeTab.PROJECT_TAB)
                     .food(new FoodProperties.Builder().nutrition(2).saturationMod(2f).build())));
+    public static final RegistryObject<Item> PAMELA = ITEMS.register("pamela",
+            ()-> new Item(new Item.Properties().tab(ModCreativeModeTab.PROJECT_TAB)
+                    .food(new FoodProperties.Builder().nutrition(5).saturationMod(3f)
+                            .effect(new MobEffectInstance(MobEffects.REGENERATION, 1000,3),1f)
+                            .effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED,1000,3),1f).build())));
 
     public static final RegistryObject<Item> STRAWBERRY = ITEMS.register("strawberry",
             ()-> new Item(new Item.Properties().tab(ModCreativeModeTab.PROJECT_TAB)

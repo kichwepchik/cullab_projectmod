@@ -11,6 +11,7 @@ import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
@@ -25,6 +26,12 @@ public class TitaniumCarverRecipe implements Recipe<SimpleContainer> {
         this.output = output;
         this.recipeItems = recipeItems;
     }
+
+    @Override
+    public NonNullList<Ingredient> getIngredients() {
+        return recipeItems;
+    }
+
     @Override
     public boolean matches(SimpleContainer pContainer, Level pLevel) {
         if (pLevel.isClientSide()){
@@ -35,6 +42,9 @@ public class TitaniumCarverRecipe implements Recipe<SimpleContainer> {
         return recipeItems.get(0).test(pContainer.getItem(0))&&recipeItems.get(1).test(pContainer.getItem(1))&&recipeItems.get(2).test(pContainer.getItem(3));
 
     }
+
+
+
 
     @Override
     public ItemStack assemble(SimpleContainer pContainer) {

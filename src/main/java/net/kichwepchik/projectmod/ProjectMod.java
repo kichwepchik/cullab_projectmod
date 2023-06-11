@@ -8,6 +8,7 @@ import net.kichwepchik.projectmod.entity.client.ChomperRenderer;
 import net.kichwepchik.projectmod.entity.client.GhostOfNetherRenderer;
 import net.kichwepchik.projectmod.item.ModItems;
 import net.kichwepchik.projectmod.networking.ModMessages;
+import net.kichwepchik.projectmod.painting.ModPaintings;
 import net.kichwepchik.projectmod.recipe.ModRecipes;
 import net.kichwepchik.projectmod.screen.ModMenuTypes;
 import net.kichwepchik.projectmod.screen.TitaniumCarverScreen;
@@ -49,7 +50,7 @@ public class ProjectMod
         ModMenuTypes.register(modEventBus);
 
         ModRecipes.register(modEventBus);
-
+        ModPaintings.register(modEventBus);
         GeckoLib.initialize();
         ModEntityTypes.register(modEventBus);
         ModVillagers.register(modEventBus);
