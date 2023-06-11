@@ -22,6 +22,10 @@
         {
           "type": "minecraft:item",
           "name": "projectmod:ghost_heart"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "projectmod:strawberry_seeds"
         }
       ],
       "rolls": 1.0

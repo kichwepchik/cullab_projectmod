@@ -1,12 +1,13 @@
 {
   "type": "forge:add_spawns",
   "biomes": [
-    "minecraft:desert"
+    "minecraft:soul_sand_valley",
+    "minecraft:crimson_forest"
   ],
   "spawners": {
     "type": "projectmod:ghost_of_nether",
     "weight": 150,
     "minCount": 1,
-    "maxCount": 3
+    "maxCount": 2
   }
 }

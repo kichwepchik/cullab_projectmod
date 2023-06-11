@@ -2,16 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "A": {
-      "item": "projectmod:mango_log"
+      "item": "projectmod:mango_planks"
     }
   },
   "pattern": [
-    "   ",
+    " A ",
     " A ",
     "   "
   ],
   "result": {
-    "count": 4,
-    "item": "projectmod:mango_planks"
+    "item": "minecraft:stick"
   }
 }

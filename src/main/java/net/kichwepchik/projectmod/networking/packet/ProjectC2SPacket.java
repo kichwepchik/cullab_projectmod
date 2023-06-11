@@ -26,7 +26,7 @@ public class ProjectC2SPacket {
             ServerPlayer player = context.getSender();
             ServerLevel level = player.getLevel();
 
-            EntityType.COW.spawn(level, null, null,player.blockPosition(),
+            EntityType.CAT.spawn(level, null, null,player.blockPosition(),
                     MobSpawnType.COMMAND, true, false);
         });
         return true;

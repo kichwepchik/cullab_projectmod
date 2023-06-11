@@ -1,7 +1,7 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"animation.ghostofnether.attack": {
+		"animation.ghost_of_nether.attack": {
 			"animation_length": 0.54167,
 			"bones": {
 				"head": {

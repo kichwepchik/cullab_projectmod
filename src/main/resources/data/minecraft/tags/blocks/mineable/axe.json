@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "projectmod:mango_planks"
+    "projectmod:mango_planks",
+    "projectmod:scout_desk"
   ]
 }
